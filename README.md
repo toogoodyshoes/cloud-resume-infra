@@ -1,7 +1,17 @@
 
-# Welcome to your CDK Python project!
+# Cloud Resume Stack
+## Prerequisites
+### SSL Certificate (Issued) from Amazon Certificate Manager
+- ARN to be passed to CloudFront construct.
+- CNAME record to be added to Hosted Zone construct.
 
-This is a blank project for CDK development with Python.
+### Add-on file
+A certificate.py file with the following variables:
+- CERTIFICATE_ARN - Contains the ARN of the certificate
+- DOMAIN_NAME - CNAME value of Domain in Certificate
+- RECORD_NAME - CNAME name of Domain in Certificate
+
+# Setup
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -54,5 +64,3 @@ command.
  * `cdk deploy`      deploy this stack to your default AWS account/region
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
-
-Enjoy!
